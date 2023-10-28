@@ -64,7 +64,7 @@ export default function Settings(prop) {
       </div>
 
       <div className="flex flex-col items-center justify-center">
-        <Image width={150} src={astroexplorer} />
+        <Image width={150} src={astroexplorer} alt="atronauta"/>
 
         <div className="w-11/12 h-auto py-3">
           <div className="w-full h-auto flex justify-center">
@@ -74,6 +74,7 @@ export default function Settings(prop) {
             {inputs.map(({value, defaultValue, ref},index)=>{
                 return(
                   <input 
+                          key={index}
                           min="1"
                           max="60"
                           className="input txt-font text-center font-semibold text-2xl"

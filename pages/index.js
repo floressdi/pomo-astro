@@ -98,7 +98,7 @@ export default function Home() {
     return()=>{
       clearInterval(timer)
     }
-  },[ticking, seconds])
+  },[ticking, seconds]);
 
   const clicktool = (showSettings) =>{
     setSettings(showSettings);
@@ -122,7 +122,7 @@ export default function Home() {
           </button>
         </div>
         <div className="w-full flex flex-col items-center">
-          <Image src={nave} width={200}/>
+          <Image src={nave} width={200} alt="nave"/>
           <Time 
             getTickingTime={getTickingTime}
             stage = {stage} 

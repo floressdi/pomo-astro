@@ -23,7 +23,7 @@ export default function Goal() {
         </div> */}
         <div>
             <div className='container__imgGoal mx-auto'>
-                <Image width={120} src={astrogoal} />
+                <Image width={120} src={astrogoal} alt='atronauta con bandera'/>
             </div>
             <p className='text-center txt-font font-normal text-base my-10 md:text-xl'>
                 <span className='text-3xl md:text-4xl font-bold'>
