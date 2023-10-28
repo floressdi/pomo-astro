@@ -2,26 +2,131 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Handjet&display=swap');
+
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --txt-white: rgb(241, 241, 241);
+  --txt-black: #343434;
+  --gray: rgb(212, 212, 212);
+  --icontheme: hsl(269, 74%, 55%);
+  --theme: #F1F1F1;
+  --dark:rgb(0,0,0);
+  --themetransparent:rgb(255,255,255, 0.10);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+[data-theme = "dark"]{
+  --txt-white: #343434;
+  --txt-black: #F1F1F1;
+  --gray: #343434;
+  --icontheme: hsla(47, 100%, 59%);
+  --theme: #232323;
+  --themetransparent:rgb(0,0,0, 0.50);
+}
+
+.main{
+  background-color: var(--theme);
+}
+
+.sectionmain{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* transition: all ease-in-out 3s; */
+}
+
+.sectionmain.activate{
+  position: absolute;
+  top: -5000%;
+}
+
+.flexbox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-gray{
+  color: var(--txt-black);
+  background-color: var(--gray);
+  transition: all 0.5s ease-out;
+}
+
+.btn-gray:hover{
+  background-color: var(--txt-black);
+  color: var(--txt-white);
+}
+
+.btn-black{
+  background-color: var(--txt-black);
+  color: var(--txt-white);
+}
+
+.txt-font{
+  font-family: 'Handjet', cursive;
+  color: var(--txt-black);
+}
+
+.input{
+  width: 60%;
+  background-color: var(--themetransparent);
+  border:1px solid var(--txt-black);
+  border-radius: 1em;
+  padding: 0.1em;
+}
+
+.section__settings{
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  bottom: 5000%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--themetransparent);
+  backdrop-filter: blur(10px);
+}
+
+.section__settings.shows{  
+  bottom: 0;
+}
+
+.section__goal{
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  bottom: 9000%;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  background-color: var(--themetransparent);
+  backdrop-filter: blur(10px);
+}
+
+.section__goal.showss{
+  bottom: 0;
+}
+
+.container__imgGoal{
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  background-color: var(--gray);
+  border: 5px solid var(--icontheme);
+  border-radius: 50%;
+  padding: 1em;
+  overflow: hidden;
+}
+
+@media (min-width:768px ){
+  .sectionmain{
+    width: 70%;
   }
-}
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  /* .section__settings{
+    width: 70%;
+  } */
+
 }

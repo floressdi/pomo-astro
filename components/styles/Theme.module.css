@@ -1,0 +1,16 @@
+.btnTheme{
+    width: 120px;
+    height: 100px;
+    background:var(--icontheme);
+    border-radius: 0.5em;
+    color: var(--txt-white);
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 1.5em;
+}
+
+
+.btnTheme:active{
+    transform: translate(0em, 0.2em);
+
+}

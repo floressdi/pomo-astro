@@ -1,0 +1,49 @@
+
+.settingscontainer{
+    width: 70%;
+    height: 70%;
+    border-radius: 1em;
+    background-color: var(--theme);
+    border: 1px solid var(--txt-black);
+}
+
+.arrowCenter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+    background-color: var(--gray);
+    color: var(--txt-black);
+    border-radius: 30%;
+    width: 50px;
+    height: 50px;
+}
+
+@media(min-width: 360px){
+    .settingscontainer{
+        height: 55%;
+    }
+}
+
+@media(min-width:768px){
+    .settingscontainer{
+        width: 50%;
+        height: 50%;
+    }
+}
+
+@media (min-width: 912px){
+    .settingscontainer{
+        height: 40%;
+    }
+}
+
+@media (min-width:1000px) {
+    .settingscontainer{
+        width: 35%;
+        height: 65%;
+    }
+}
+
+
+
