@@ -21,7 +21,20 @@
 
 @media(min-width: 360px){
     .settingscontainer{
-        height: 55%;
+        width: 80%;
+        height: 65%;
+    }
+}
+
+@media(min-width:390px){
+    .settingscontainer{
+        height: 50%;
+    }
+}
+
+@media(min-width:414px){
+    .settingscontainer{
+        height: 50%;
     }
 }
 

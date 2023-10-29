@@ -9,7 +9,6 @@ import dynamic from 'next/dynamic'
 export default function Settings(prop) {
   const { clicktool, pomodoroRef, updateTimeDefaultValue} = prop;
 
-
   const inputs =[
     {
       value: "Pomodor",
